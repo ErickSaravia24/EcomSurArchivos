@@ -32,19 +32,13 @@ EXEC sp_addlinkedserver
     @rmtuser = 'sa',
     @rmtpassword = '12345678';
 
-USE EcomSurProductos
+
+USE EcomSurProductos;
 GO
-SELECT * FROM sys.objects WHERE name = 'BDUsuarios'
-CREATE VIEW dbo.BDUsuarios AS
+
+CREATE VIEW dbo.BDUsuarios  AS
 SELECT *
 FROM EcomSurProductos.EcomSurProductos.dbo.BDUsuarios
 GO
 
 
-USE EcomSurProductos;
-GO
-
-CREATE VIEW dbo.ProductosUsuarios 
-GO
-
-AS
